@@ -11,13 +11,13 @@ const Listing = () => {
   
   const [searchData, setSearchData] = useState([]);
 
-  const { data, loading } = useFetch("https://meetup-app-backend-opal.vercel.app/events/");
+  const { data, loading } = useFetch("https://mohdrafi-store.vercel.app/events/");
 
   const handleSelectEvent = (event) => {
     const selectedValue = event.target.value;
     setEventStatus(selectedValue);
 
-    fetch(`https://meetup-app-backend-opal.vercel.app?event=${selectedValue}`)
+    fetch(`https://mohdrafi-store.vercel.app/events?event=${selectedValue}`)
       .then((response) => response.json())
       .then((data) => {
         setEventData(data);
@@ -31,7 +31,7 @@ const Listing = () => {
     const fetchEvents = async () => {
       try {
         const response = await fetch(
-          `https://meetup-app-backend-opal.vercel.app?search=${search}`
+          `https://mohdrafi-store.vercel.app/events?search=${search}`
         );
         const data = await response.json();
         console.log(data);
