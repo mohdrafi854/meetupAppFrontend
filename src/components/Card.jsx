@@ -1,13 +1,14 @@
-import useFetch from "../useFetch";
 import { Link } from "react-router-dom";
 
-const Card = () => {
-  const { data, error, loading } = useFetch("https://meetup-app-backend-opal.vercel.app/events/");
+const Card = ({data, loading}) => {
+if (!Array.isArray(data)) {
+  return <p>No events found</p>;
+}
 
-  return data ? (
+  return Array.isArray(data) ? (
     <>
-      {data?.map((event) => (
-        <div className="col-md-4 mb-3">
+      {Array.isArray(data) && data?.map((event) => (
+        <div className="col-md-4 mb-3" key={event._id}>
           <Link to={`/detail/${event._id}`} className="card">
             <img src={event.image} alt="" />
             <div className="event-status">{event.event}</div>

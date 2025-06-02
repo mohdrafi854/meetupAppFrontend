@@ -1,17 +1,20 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import { useSearch } from "../context/Search.context";
 
 const Search = () => {
+  const { setSearch, search } = useSearch();
+
+
+
+
   return (
     <form>
       <input
         type="text"
         className="form-control"
         placeholder="Search By Title"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
       />
-      <button>
-        <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
-      </button>
     </form>
   );
 };
