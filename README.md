@@ -40,92 +40,42 @@ Watch a walkthrough (5–7 minutes) of all major features of this app: [Loom Vid
 
 ## API Refrence
 
-### **GET /api/categories**<br>
-Display all categories<br>
+### **GET /events/**<br>
+Display all events<br>
 Sample Response:<br>
 ```
-[{_id, name, imageUrl}, ....]
+[{_id, event, image, date, title, details, hosted, dressCode, ageRestrictions, location, fees, tags}, ....]
 ```
 
-### **GET /api/products**<br>
-Display all List<br>
+
+
+### **POST /events/**<br>
+Create new event<br>
 Sample Response:<br>
 ```
-[{_id, name, price, rating, size, imageUrl}, ....]
+[{_id, event, image, date, title, details, hosted, dressCode, ageRestrictions, location, fees, tags}, ....]
 ```
 
-### **GET /api/products**<br>
-View full details<br>
+### **POST /events/:eventId**<br>
+Create event by id<br>
 Sample Response:<br>
 ```
-[{_id, name, price, rating, size, imageUrl}, ....]
+[{_id, event, image, date, title, details, hosted, dressCode, ageRestrictions, location, fees, tags}, ....]
 ```
 
-### **GET /api/wishlist**<br>
-Display all wishlist items<br>
-Sample Response:<br>
-```
-[{_id, Category, imageUrl, name, price, rating, size}, ....]
-```
 
-### **GET /api/cart**<br>
-Display all cart items<br>
-Sample Response:<br>
-```
-[{_id, items, totalPrice}, ....]
-```
 
-### **POST /api/products**<br>
-Create new item<br>
-Sample Response:<br>
-```
-[{_id, name, price, imageUrl, Category}, ....]
-```
-
-### **PATCH /api/products/:id**<br>
-Create new item<br>
-Sample Response:<br>
-```
-[{_id, name, price, imageUrl, Category}, ....]
-```
-
-### **POST /api/categories**<br>
-Create new category<br>
-Sample Response:<br>
-```
-[{_id, name, imageUrl}, ....]
-```
-
-### **DELETE /api/categories/:id**<br>
-Delete item by id<br>
+### **DELETE /events/:eventId**<br>
+Delete event by id<br>
 Sample Response:<br>
 ```
 [{_id}, ....]
 ```
 
-### **POST /api/cart**<br>
-Add to cart item<br>
-Sample Response:<br>
-```
-[{_id, quantity}, ....]
-```
 
-### **DELETE /api/cart/item/:id**<br>
-Delete cart item<br>
-Sample Response:<br>
-```
-[{_id}, ....]
-```
 
-### **POST /api/wishlist**<br>
-Add to wishlist item<br>
-Sample Response:<br>
-```
-[{_id}, ....]
-```
-
-### **DELETE /api/wishlist/:id**<br>
-Delete wishlist item<br>
+### **PATCH /events/:id/edit**<br>
+Event update by id<br>
 Sample Response:<br>
 ```
 [{_id}, ....]
