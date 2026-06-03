@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Ecommerce App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack event web app built with the MERN stack (MongoDB, Express.js, React, Node.js). Users can browse upcoming events on the landing page, search by title, filter by online/offline, and view detailed event.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Demo Link
 
-### `npm start`
+[Live Demo](https://meetup-event.vercel.app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Quick Start
+```
+git clone https://github.com/mohdrafi854/meetupAppFrontend.git
+cd <your-repo>
+npm install
+npm run dev  # or `npm run start` / `yarn dev`
+```
 
-### `npm test`
+## Technologies
+- React JS
+- React Router
+- Node JS
+- Express JS
+- MongoDB
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo Video
+Watch a walkthrough (5–7 minutes) of all major features of this app: [Loom Video Link]()
 
-### `npm run build`
+## Features
+**Home**
+- Display list of all events
+- Filter events type online or offline
+- Search event by title
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Detail Page**
+- View full information
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API Refrence
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **GET /events/**<br>
+Display all events<br>
+Sample Response:<br>
+```
+[{_id, event, image, date, title, details, hosted, dressCode, ageRestrictions, location, fees, tags}, ....]
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **POST /events/**<br>
+Create new event<br>
+Sample Response:<br>
+```
+[{_id, event, image, date, title, details, hosted, dressCode, ageRestrictions, location, fees, tags}, ....]
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **POST /events/:eventId**<br>
+Create event by id<br>
+Sample Response:<br>
+```
+[{_id, event, image, date, title, details, hosted, dressCode, ageRestrictions, location, fees, tags}, ....]
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **DELETE /events/:eventId**<br>
+Delete event by id<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **PATCH /events/:id/edit**<br>
+Event update by id<br>
+Sample Response:<br>
+```
+[{_id}, ....]
+```
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+For bug or feature requests, please reach out to mohd.rafi854@gmail.com
