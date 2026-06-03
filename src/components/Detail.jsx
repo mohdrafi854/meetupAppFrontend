@@ -16,6 +16,8 @@ const Detail = () => {
       <div className="container">
         <div className="row justify-content-between">
           <div className="col-md-6">
+            {loading && <p>Loading...</p>}
+            {error && <p>Error is coming</p>}
             {eventDetail && (
               <>
                 <h1>{eventDetail.title}</h1>
