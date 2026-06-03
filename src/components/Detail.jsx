@@ -8,7 +8,7 @@ const Detail = () => {
 
   const eventId = useParams();
 
-  const eventDetail = data?.find((event) => event._id == eventId.productId);
+  const eventDetail = data?.find((event) => event._id === eventId.productId);
   return (
     <div>
       <Header />
